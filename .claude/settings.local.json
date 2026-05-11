@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\kacper\\\\Desktop\\\\Projekty\\\\NodeJs\\\\ExpressJS\" -Recurse -Force | Where-Object { $_.FullName -notmatch 'node_modules' } | ForEach-Object { $_.FullName } | Sort-Object)",
+      "PowerShell(Get-ChildItem -Recurse \"C:\\\\Users\\\\kacper\\\\Desktop\\\\Projekty\\\\NodeJs\\\\ExpressJS\" -Exclude \"node_modules\" | Where-Object { $_.FullName -notmatch \"node_modules\" } | Select-Object FullName)",
+      "Bash(timeout 5 node --env-file=.env server.js)"
+    ]
+  }
+}
